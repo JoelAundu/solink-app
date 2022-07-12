@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/navbar";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import Footer from "./components/Footer";
+import { useEffect, useState } from "react";
+import SpaceMission from "./graphql";
+import TestMission from "./graphql/test";
+import NextLaunch from "./components/sections/NextLaunch";
+import "../src/index.css";
 
 function App() {
+  const [data, setData] = useState([]);
+  const [upComingdata, setupComingdata] = useState([]);
+
+  const fetchMissions = async () => {
+    const missions = await SpaceMission.getSpaceMission(10);
+    setData(missions);
+  };
+  const fectTest = async () => {
+    const missions = await TestMission.getTestMission(10);
+    setupComingdata(missions);
+  };
+
+  useEffect(() => {
+    fetchMissions();
+    fectTest();
+  }, []);
+
+  console.log("Space Misision data 1", data);
+  console.log("Space Misision data 2", upComingdata);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <NextLaunch data={data} />
+      {/* {data.map((content, index) => (
+        <p>{content.mission_name}</p>
+    ))} */}
+      {/* <Footer /> */}
     </div>
   );
 }

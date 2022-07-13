@@ -1,6 +1,6 @@
 import gql from "graphql-tag";
 
-export const GET_SPACE_MISSION = gql`
+export const GET_NEXT_MISSION = gql`
   query {
     launchNext {
       mission_name
@@ -13,7 +13,7 @@ export const GET_SPACE_MISSION = gql`
 `;
 
 export const GET_UPCOMING_LAUNCH = gql`
-  query GetUpMission($limit: Int!) {
+  query UpMission($limit: Int!) {
     launchesUpcoming(limit: $limit) {
       mission_name
       launch_date_local
@@ -25,9 +25,10 @@ export const GET_UPCOMING_LAUNCH = gql`
 `;
 
 export const GET_PAST_LAUNCH = gql`
-  query GetSpaceMission($limit: Int!) {
+  query PastMission($limit: Int!) {
     launchesPast(limit: $limit) {
       mission_name
+      launch_date_local
       launch_site {
         site_name
       }

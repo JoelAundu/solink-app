@@ -1,4 +1,4 @@
-import { GET_PAST_LAUNCH } from "./queries";
+import { GET_NEXT_MISSION } from "./queries";
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 export const client = new ApolloClient({
@@ -6,19 +6,19 @@ export const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-class SpaceTest {
-  async getTestMission(limit = 10) {
+class SpaceService {
+  async getNextMission(limit = 10) {
     try {
       const response = await client.query({
-        query: GET_PAST_LAUNCH,
+        query: GET_NEXT_MISSION,
         variables: { limit },
       });
       if (!response || !response.data) throw new Error("Error fetching data");
-      return response.data.launchesPast;
+      return response.data.launchNext;
     } catch (error) {
       throw error;
     }
   }
 }
 
-export default new SpaceTest();
+export default new SpaceService();

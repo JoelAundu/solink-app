@@ -1,5 +1,5 @@
 import React from "react";
-
+import moment from "moment";
 const UpComingLaunches = ({ upComingData }) => {
   return (
     <div className="bg-zinc-200">
@@ -25,7 +25,10 @@ const UpComingLaunches = ({ upComingData }) => {
                   {mission.mission_name}
                 </td>
                 <td className="border p-2 border-slate-300">
-                  {mission.launch_date_local}
+                  {moment(mission.launch_date_local).format(
+                    "MMMM Do YYYY, h:mm:ss a"
+                  )}
+                  {/* {mission.launch_date_local} */}
                 </td>
                 <td className="border p-2 border-slate-300">
                   {mission.launch_site.site_name}

@@ -1,5 +1,5 @@
 import React from "react";
-
+import moment from "moment";
 const NextLaunch = ({ data }) => {
   const { mission_name, launch_date_local, launch_site } = data;
   return (
@@ -14,7 +14,8 @@ const NextLaunch = ({ data }) => {
               Mission Name - {mission_name}
             </h2>
             <h2 className="text-xl md:text-2xl font-bold text-black font-mono">
-              Launch date - {launch_date_local}
+              Launch date -{" "}
+              {moment(launch_date_local).format("MMMM Do YYYY, h:mm:ss a")}
             </h2>
             <h2 className="text-xl md:text-2xl font-bold text-black font-mono">
               Site name - {launch_site?.site_name}

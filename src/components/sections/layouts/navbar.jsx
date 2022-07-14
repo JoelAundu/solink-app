@@ -25,10 +25,10 @@ const Navbar = () => {
           Home
         </Link>
         <Link
-          to="/past-launches"
+          to="/pastLaunches"
           className="font-bold px-3 py-2 text-xl md:text-2xl hover:text-solink-green font-mono"
         >
-          Past Launches
+          PastLaunches
         </Link>
       </ul>
 
@@ -52,10 +52,10 @@ const Navbar = () => {
           Home
         </Link>
         <Link
-          to="/past-launches"
+          to="/pastLaunches"
           className="py-6 text-4xl hover:text-solink-green font-[poppins] font-bold"
         >
-          Past Launches
+          PastLaunches
         </Link>
       </ul>
     </div>

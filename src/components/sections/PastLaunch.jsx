@@ -8,7 +8,7 @@ const PastLaunch = ({ pastData }) => {
           rounded-xl text-center shadow-xl"
       >
         <h1 className="md:text-3xl text-2xl pt-32 pb-6 font-bold text-solink-blue hover:text-solink-green font-[poppins] text-center">
-          Past Launches
+          PAST LAUNCHES
         </h1>
         <table className="bg-zinc-200 border-2 text-left ml-auto mr-auto shadow-2xl font-[poppins] p-4">
           <thead className=" text-solink-green ">

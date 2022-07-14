@@ -2,7 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Instructions for starting the project
+
+Make sure to run `npm install` to install all the libraries within the project
+Ensure that you have the AWS CLI installed in your machine for future updates
+
+## Project Road-Map
+
+1. Apollo Client connected to get data from the spaceX API
+2. TalwindCSS integrated for styling the web application
+3. Libraries used: moment- to convert the date, GraphQl- to connect the Apollo client
 
 In the project directory, you can run:
 

@@ -20,15 +20,15 @@ const Navbar = () => {
       <ul className="m-8 hidden md:flex py-6 text-2xl font-bold text-solink-blue font-[poppins]">
         <Link
           to="/"
-          className="font-bold px-3 py-2 text-xl md:text-2xl hover:text-solink-green font-[poppins]"
+          className="font-bold px-3 py-2 text-xl md:text-2xl hover:text-black font-[poppins]"
         >
-          Home
+          HOME
         </Link>
         <Link
           to="/pastLaunches"
-          className="font-bold px-3 py-2 text-xl md:text-2xl hover:text-solink-green font-mono"
+          className="font-bold px-3 py-2 text-xl md:text-2xl hover:text-black font-mono"
         >
-          PastLaunches
+          PASTLAUNCHES
         </Link>
       </ul>
 
@@ -49,13 +49,13 @@ const Navbar = () => {
           to="/"
           className="py-6 text-4xl hover:text-solink-green font-[poppins] font-bold"
         >
-          Home
+          HOME
         </Link>
         <Link
           to="/pastLaunches"
           className="py-6 text-4xl hover:text-solink-green font-[poppins] font-bold"
         >
-          PastLaunches
+          PASTLAUNCHES
         </Link>
       </ul>
     </div>

@@ -8,7 +8,7 @@ const UpComingLaunches = ({ upComingData }) => {
           rounded-xl text-center shadow-xl"
       >
         <h1 className="md:text-3xl text-2xl font-bold pb-6 text-solink-blue hover:text-solink-green font-[poppins] text-center">
-          Upcoming Launches
+          UPCOMING LAUNCHES
         </h1>
         <table className="bg-zinc-200 text-center font-[poppins] ml-auto mr-auto shadow-2xl">
           <thead className="">
